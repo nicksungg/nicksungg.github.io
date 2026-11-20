@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nicholas Sung · MIT · Scientific machine learning for engineering design</title>
-  <meta name="description" content="Nicholas Sung is a graduate researcher at MIT (DeCoDE Lab, advised by Prof. Faez Ahmed) working on scientific machine learning for engineering design: surrogates for simulation, aircraft datasets, and multi-fidelity methods. Live demos of BlendedNet and BlendedNet++.">
+  <meta name="description" content="Nicholas Sung is a graduate researcher at MIT (DeCoDE Lab, advised by Prof. Faez Ahmed) working on scientific machine learning for engineering design: surrogates for simulation, aircraft datasets, and multi-fidelity methods. Live demos of BlendedNet, BlendedNet++ and BlendedNet++ Structures.">
   <meta name="author" content="Nicholas Sung">
   <meta property="og:title" content="Nicholas Sung · MIT · Scientific machine learning for engineering design">
-  <meta property="og:description" content="Nicholas Sung is a graduate researcher at MIT (DeCoDE Lab, advised by Prof. Faez Ahmed) working on scientific machine learning for engineering design: surrogates for simulation, aircraft datasets, and multi-fidelity methods. Live demos of BlendedNet and BlendedNet++.">
+  <meta property="og:description" content="Nicholas Sung is a graduate researcher at MIT (DeCoDE Lab, advised by Prof. Faez Ahmed) working on scientific machine learning for engineering design: surrogates for simulation, aircraft datasets, and multi-fidelity methods. Live demos of BlendedNet, BlendedNet++ and BlendedNet++ Structures.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nicksungg.github.io/">
   <meta property="og:image" content="https://nicksungg.github.io/assets/img/projects/structures.jpg">
@@ -128,7 +128,7 @@
               finite element models of the internal structure, so a design can be chosen for low mass under stress and volume limits.
               With nTop, I organized a design challenge built on it for the
               <a href="https://www.linkedin.com/posts/we-are-excited-to-share-that-ntop-is-once-share-7490517883760844800-FCoN/" target="_blank" rel="noopener">ASME IDETC-CIE 2026 Student Hackathon</a>.
-              BlendedNet and BlendedNet++ have <a href="demos.html">live demos</a> on this site.
+              All three have <a href="demos.html">live demos</a> on this site.
             </p>
             <p>
               On the methods side, <a href="publications.html#pub-fire">FIRE</a> (ICML 2026 Spotlight) uses tabular foundation
@@ -181,8 +181,8 @@
     <div class="sec-head">
       <div>
         <span class="sec-num">FEATURED</span>
-        <h2>The BlendedNet aircraft projects</h2>
-        <p>BlendedNet and BlendedNet++ have live demos that run on my workstation at MIT, so you can use the real models from your browser.</p>
+        <h2>Try my research live</h2>
+        <p>Three demos of the BlendedNet aircraft design work. They run on my workstation at MIT, so you can use the real models from your browser.</p>
       </div>
       <div class="sc-tabs" role="tablist" aria-label="Featured projects" data-tabs="showcase">
         <button class="sc-tab active" role="tab" aria-selected="true" data-tab="blendednet">BlendedNet</button>
@@ -250,26 +250,28 @@
       <!-- BlendedNet++ Structures -->
       <div class="sc-stage" data-panel="structures" role="tabpanel" hidden>
         <div class="sc-view">
-          <div class="sc-poster">
+          <a class="sc-poster" href="demos.html#structures" aria-label="Open the BlendedNet++ Structures live demo">
             <img src="assets/img/projects/structures.jpg" width="1600" height="1000" loading="lazy"
                  alt="Internal ribs, spars and frames of a blended wing body aircraft, colored by stress, inside a translucent outer surface">
-          </div>
+            <span class="play"><svg><use href="#i-play"/></svg>Open the live demo</span>
+          </a>
           <p class="sc-caption">From the paper: stress on the internal structure of one design, from the finite element analysis.</p>
         </div>
         <aside class="sc-side">
           <div>
             <span class="eyebrow">BlendedNet++ Structures · AIAA SciTech 2027</span>
-            <h3>Choose the airframe and its internal structure together</h3>
+            <h3>Build the airframe and its internal structure</h3>
             <p>An aerostructural dataset in which <em>predicted aerodynamic loads drive a shell finite element model</em>, and a benchmark for choosing planform, layout, and sizing to minimize mass under stress and volume limits.</p>
           </div>
           <ol class="sc-steps">
-            <li>Aerodynamic loads come from the BlendedNet++ surface predictions.</li>
-            <li>A parametric shell finite element model gives mass, internal volume, and stress.</li>
-            <li>A surrogate ensemble searches planform, layout, and sizing for the lowest mass.</li>
-            <li>The chosen designs are verified again by finite element analysis.</li>
+            <li>Move the sliders for the planform and the structural layout.</li>
+            <li><b>Build geometry</b> runs nTop on my workstation, in about 40 seconds.</li>
+            <li>Explore the outer surface and the internal structure in 3D.</li>
+            <li>The <b>Pareto explorer</b> finds low-mass designs for a mission you set.</li>
           </ol>
           <div class="sc-stats"><div><b>13,989</b><span>analyzed runs</span></div><div><b>1,369</b><span>planforms</span></div><div><b>1.2%</b><span>median error in predicted mass</span></div></div>
-          <div class="sc-links"><a class="go" href="publications.html#pub-structures">Paper details</a><a href="https://www.linkedin.com/posts/we-are-excited-to-share-that-ntop-is-once-share-7490517883760844800-FCoN/" target="_blank" rel="noopener">IDETC 2026 hackathon</a></div>
+          <span class="status" data-demo-status="structures">Checking…</span>
+          <div class="sc-links"><a class="go" href="demos.html#structures">Live demo</a><a href="https://www.linkedin.com/posts/we-are-excited-to-share-that-ntop-is-once-share-7490517883760844800-FCoN/" target="_blank" rel="noopener">IDETC 2026 hackathon</a></div>
         </aside>
       </div>
     </div>
@@ -332,6 +334,6 @@
 <button class="icon-btn to-top" id="toTop" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
 
 <script src="assets/js/main.js?v=1"></script>
-<script src="assets/js/live.js?v=2"></script>
+<script src="assets/js/live.js?v=3"></script>
 </body>
 </html>
