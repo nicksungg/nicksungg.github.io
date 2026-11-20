@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T10:23:02Z",
+  "updated": "2026-11-20T17:06:38Z",
   "demos": {
     "blendednet": {
       "url": "https://organization-exempt-prevention-plaza.trycloudflare.com",
@@ -7,10 +7,6 @@
     },
     "blendednetpp": {
       "url": "https://asks-parties-leon-developing.trycloudflare.com",
-      "ok": true
-    },
-    "structures": {
-      "url": "https://tue-leon-evident-closer.trycloudflare.com",
       "ok": true
     }
   }
