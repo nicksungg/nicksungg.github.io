@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Live demos · Nicholas Sung</title>
-  <meta name="description" content="Try BlendedNet, BlendedNet++ and BlendedNet++ Structures in the browser. The demos run on Nicholas Sung's workstation at MIT.">
+  <meta name="description" content="Try BlendedNet and BlendedNet++ in the browser. The demos run on Nicholas Sung's workstation at MIT.">
   <meta name="author" content="Nicholas Sung">
   <meta property="og:title" content="Live demos · Nicholas Sung">
-  <meta property="og:description" content="Try BlendedNet, BlendedNet++ and BlendedNet++ Structures in the browser. The demos run on Nicholas Sung's workstation at MIT.">
+  <meta property="og:description" content="Try BlendedNet and BlendedNet++ in the browser. The demos run on Nicholas Sung's workstation at MIT.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nicksungg.github.io/demos.html">
   <meta property="og:image" content="https://nicksungg.github.io/assets/img/projects/structures.jpg">
@@ -83,7 +83,6 @@
       <div class="sc-tabs" role="tablist" aria-label="Choose a demo" data-tabs="demoPanels" data-hash>
         <button class="sc-tab active" role="tab" aria-selected="true" data-tab="blendednet">BlendedNet</button>
         <button class="sc-tab" role="tab" aria-selected="false" data-tab="blendednetpp">BlendedNet++</button>
-        <button class="sc-tab" role="tab" aria-selected="false" data-tab="structures">BlendedNet++ Structures</button>
       </div>
     </div>
 
@@ -160,43 +159,6 @@
         </div>
       </div>
 
-      <!-- BlendedNet++ Structures -->
-      <div data-panel="structures" role="tabpanel" hidden>
-        <div class="demo-info">
-          <div class="card">
-            <span class="eyebrow">BlendedNet++ Structures · AIAA SciTech 2027</span>
-            <h3 style="margin-top:6px">Build the airframe and its internal structure</h3>
-            <p>Sliders set the planform and the layout of ribs, spars and frames. nTop builds the outer surface and the internal structure on my workstation, and you can turn both in 3D. The Pareto explorer runs the inverse design: it searches for low-mass designs for a mission and builds three of them.</p>
-            <div class="demo-actions">
-              <span class="status" data-demo-status="structures">Checking…</span>
-              <button class="btn demo" type="button" data-for="structures" data-demo-path="/">3D viewer</button>
-              <button class="btn" type="button" data-for="structures" data-demo-path="/pareto">Pareto explorer</button>
-              <a class="btn" data-demo-open="structures" href="#" target="_blank" rel="noopener" hidden><svg><use href="#i-arrow"/></svg>Open in a new tab</a>
-              <a class="btn" href="https://github.com/nicksungg/blendednet-pp-structures" target="_blank" rel="noopener"><svg><use href="#i-code"/></svg>Code &amp; data</a>
-            </div>
-          </div>
-          <div class="card">
-            <h3>What to try</h3>
-            <ol>
-              <li>In the <b>3D viewer</b>, click <b>Build geometry</b>. The build takes about 40 seconds.</li>
-              <li>Change the number of ribs or the wing sweep and build again to compare.</li>
-              <li>In the <b>Pareto explorer</b>, click <b>Run inverse design</b>. The search takes about 75 seconds, then three designs are built.</li>
-            </ol>
-            <p class="note">Each build uses a licensed copy of nTop, so this demo is limited to 30 builds an hour.</p>
-          </div>
-        </div>
-        <div class="demo-frame" data-demo-frame="structures" data-path="/">
-          <iframe title="BlendedNet++ Structures live demo" allow="fullscreen"></iframe>
-          <div class="demo-off" hidden>
-            <div>
-              <img src="assets/img/projects/structures.jpg" alt="" width="1600" height="1000">
-              <h3>This demo is offline right now</h3>
-              <p>It runs on my workstation, which is down or busy at the moment. The figure above is from the paper. <a href="mailto:nicksung@mit.edu">Email me</a> and I will bring the demo back up.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -213,6 +175,6 @@
 <button class="icon-btn to-top" id="toTop" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
 
 <script src="assets/js/main.js?v=1"></script>
-<script src="assets/js/live.js?v=1"></script>
+<script src="assets/js/live.js?v=2"></script>
 </body>
 </html>

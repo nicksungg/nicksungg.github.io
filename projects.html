@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects · Nicholas Sung</title>
-  <meta name="description" content="Research projects by Nicholas Sung: live demos of BlendedNet, BlendedNet++ and BlendedNet++ Structures, plus datasets, code, and earlier research.">
+  <meta name="description" content="Research projects by Nicholas Sung: BlendedNet, BlendedNet++ and BlendedNet++ Structures, with live demos of the first two, plus datasets, code, and earlier research.">
   <meta name="author" content="Nicholas Sung">
   <meta property="og:title" content="Projects · Nicholas Sung">
-  <meta property="og:description" content="Research projects by Nicholas Sung: live demos of BlendedNet, BlendedNet++ and BlendedNet++ Structures, plus datasets, code, and earlier research.">
+  <meta property="og:description" content="Research projects by Nicholas Sung: BlendedNet, BlendedNet++ and BlendedNet++ Structures, with live demos of the first two, plus datasets, code, and earlier research.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nicksungg.github.io/projects.html">
   <meta property="og:image" content="https://nicksungg.github.io/assets/img/projects/structures.jpg">
@@ -73,7 +73,7 @@
   <div class="wrap">
     <span class="sec-num">PROJECTS</span>
     <h1>Projects</h1>
-    <p>The BlendedNet aircraft design projects with their live demos, then datasets, code, and earlier research.</p>
+    <p>The BlendedNet aircraft design projects, then datasets, code, and earlier research.</p>
   </div>
 </section>
 
@@ -84,7 +84,7 @@
       <div>
         <span class="sec-num">AIRCRAFT DESIGN</span>
         <h2>The BlendedNet family</h2>
-        <p>Three projects on blended wing body aircraft, each with a demo that runs on my workstation at MIT.</p>
+        <p>Three projects on blended wing body aircraft. BlendedNet and BlendedNet++ have demos that run on my workstation at MIT.</p>
       </div>
     </div>
     <div class="projects">
@@ -132,20 +132,18 @@
       </article>
 
       <article class="project wide reveal" id="proj-structures">
-        <a class="thumb" href="demos.html#structures">
+        <div class="thumb">
           <img src="assets/img/projects/structures.jpg" alt="Internal ribs, spars and frames of a blended wing body aircraft, colored by stress, inside a translucent outer surface" loading="lazy" width="1600" height="1000">
           <span class="when">AIAA SciTech 2027</span>
-          <span class="status" data-demo-status="structures">Checking…</span>
-        </a>
+        </div>
         <div class="body">
           <h3>BlendedNet++ Structures</h3>
           <div class="org">MIT DeCoDE Lab with nTop and MIT Lincoln Laboratory</div>
           <p>An aerostructural dataset and inverse design benchmark. Aerodynamic surface forces predicted by BlendedNet++ load a parametric shell finite element model: 13,989 analyzed runs on 1,369 planforms, linking shape, flight condition, and structural sizing to airframe mass, internal volume, and stress. Designs chosen with the surrogate are verified again by finite element analysis. With nTop, I organized a design challenge built on this dataset for the <a href="https://www.linkedin.com/posts/we-are-excited-to-share-that-ntop-is-once-share-7490517883760844800-FCoN/" target="_blank" rel="noopener">ASME IDETC-CIE 2026 Student Hackathon</a>.</p>
-          <p><b>In the demo:</b> set the planform and the structural layout, build the outer surface and internal structure with nTop, and explore them in 3D. The Pareto explorer finds low-mass designs for a mission.</p>
           <div class="tags"><span class="tag">Finite Element Analysis</span><span class="tag">Multiphysics</span><span class="tag">nTop</span><span class="tag">Inverse Design</span></div>
           <div class="pub-links">
-            <a class="btn demo" href="demos.html#structures"><svg><use href="#i-play"/></svg>Live demo</a>
-            <a class="btn" href="https://github.com/nicksungg/blendednet-pp-structures" target="_blank" rel="noopener"><svg><use href="#i-code"/></svg>Code &amp; data</a>
+            <a class="btn" href="publications.html#pub-structures"><svg><use href="#i-pdf"/></svg>Paper details</a>
+            <a class="btn" href="https://www.linkedin.com/posts/we-are-excited-to-share-that-ntop-is-once-share-7490517883760844800-FCoN/" target="_blank" rel="noopener"><svg><use href="#i-web"/></svg>IDETC 2026 hackathon</a>
           </div>
         </div>
       </article>
@@ -161,7 +159,7 @@
       <div>
         <span class="sec-num">METHODS, DATA &amp; CODE</span>
         <h2>Multi-fidelity learning and generative design</h2>
-        <p>Methods and public releases beyond the three demos.</p>
+        <p>Methods and public releases beyond the three aircraft projects.</p>
       </div>
     </div>
     <div class="projects">
@@ -263,6 +261,6 @@
 <button class="icon-btn to-top" id="toTop" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
 
 <script src="assets/js/main.js?v=1"></script>
-<script src="assets/js/live.js?v=1"></script>
+<script src="assets/js/live.js?v=2"></script>
 </body>
 </html>

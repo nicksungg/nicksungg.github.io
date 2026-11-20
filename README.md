@@ -9,7 +9,7 @@ Plain static HTML, CSS and JavaScript, served by GitHub Pages from the `main` br
 | `index.html` | Home: about, featured live demos, news, contact |
 | `publications.html` | Papers, with links, and manuscripts under review |
 | `projects.html` | Projects, datasets and code |
-| `demos.html` | The three live demos, embedded |
+| `demos.html` | The live demos, embedded |
 | `experience.html` | Research, teaching, education, honors |
 | `assets/css/style.css` | All styles, light and dark |
 | `assets/js/main.js` | Theme toggle, menu, tabs |
@@ -17,7 +17,7 @@ Plain static HTML, CSS and JavaScript, served by GitHub Pages from the `main` br
 
 ## Live demos
 
-The BlendedNet, BlendedNet++ and BlendedNet++ Structures demos run on a workstation and reach
+The BlendedNet and BlendedNet++ demos run on a workstation and reach
 visitors through tunnels whose addresses can change. The workstation writes the current addresses to
 `live.json` on the `live` branch of this repository. `assets/js/live.js` reads that file, checks from the
 visitor's browser whether each demo answers, and either embeds it or shows that it is offline.

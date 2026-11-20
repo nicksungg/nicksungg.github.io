@@ -1,6 +1,6 @@
 // Live demos.
 //
-// The three demos run on my workstation and are reached through tunnels whose
+// The demos run on my workstation and are reached through tunnels whose
 // addresses can change when the machine restarts. The workstation publishes the
 // current addresses to live.json on the "live" branch of this repository; this
 // script reads that file, checks from the visitor's browser whether each demo
@@ -13,7 +13,7 @@
     { url: 'https://raw.githubusercontent.com/' + REPO + '/live/live.json' },
     { url: 'live.json' }
   ];
-  var NAMES = ['blendednet', 'blendednetpp', 'structures'];
+  var NAMES = ['blendednet', 'blendednetpp'];
 
   function fetchJson(src) {
     return fetch(src.url, { headers: src.headers || {}, cache: 'no-store' }).then(function (r) {
