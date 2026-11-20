@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nicholas Sung · MIT · Scientific machine learning for engineering design</title>
+  <meta name="description" content="Nicholas Sung is a graduate researcher at MIT (DeCoDE Lab, advised by Prof. Faez Ahmed) working on scientific machine learning for engineering design: surrogates for simulation, aircraft datasets, and multi-fidelity methods. Live demos of BlendedNet, BlendedNet++ and BlendedNet++ Structures.">
+  <meta name="author" content="Nicholas Sung">
+  <meta property="og:title" content="Nicholas Sung · MIT · Scientific machine learning for engineering design">
+  <meta property="og:description" content="Nicholas Sung is a graduate researcher at MIT (DeCoDE Lab, advised by Prof. Faez Ahmed) working on scientific machine learning for engineering design: surrogates for simulation, aircraft datasets, and multi-fidelity methods. Live demos of BlendedNet, BlendedNet++ and BlendedNet++ Structures.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nicksungg.github.io/">
+  <meta property="og:image" content="https://nicksungg.github.io/assets/img/projects/structures.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://nicksungg.github.io/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=1">
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nicholas Sung",
+    "jobTitle": "Graduate Researcher",
+    "affiliation": { "@type": "Organization", "name": "Massachusetts Institute of Technology" },
+    "alumniOf": ["Nanyang Technological University"],
+    "email": "mailto:nicksung@mit.edu",
+    "url": "https://nicksungg.github.io/",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=GLLSoL8AAAAJ",
+      "https://github.com/nicksungg",
+      "https://www.linkedin.com/in/nicholassung/"
+    ]
+  }
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-scholar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.53.1.72-.23.72-.5v-1.86c-2.92.63-3.54-1.25-3.54-1.25-.48-1.21-1.17-1.54-1.17-1.54-.95-.65.07-.64.07-.64 1.05.08 1.61 1.08 1.61 1.08.94 1.6 2.46 1.14 3.06.87.1-.68.37-1.14.67-1.4-2.33-.27-4.78-1.17-4.78-5.19 0-1.15.41-2.08 1.08-2.82-.11-.27-.47-1.33.1-2.78 0 0 .88-.28 2.89 1.08a10 10 0 0 1 5.26 0c2-1.36 2.88-1.08 2.88-1.08.58 1.45.22 2.51.11 2.78.67.74 1.08 1.67 1.08 2.82 0 4.03-2.46 4.92-4.8 5.18.38.33.72.97.72 1.96v2.9c0 .28.19.61.73.5A10.5 10.5 0 0 0 12 1.5z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.05c.53-1 1.83-1.9 3.75-1.9 4 0 4.9 2.5 4.9 6V21h-4v-4.9c0-1.3-.03-3-1.9-3s-2.1 1.4-2.1 2.9V21h-4z"/></symbol>
+    <symbol id="i-pdf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></symbol>
+    <symbol id="i-data" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Nicholas Sung</a>
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#research">Featured</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="demos.html">Live demos</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="icon-btn theme-btn" id="themeBtn" aria-label="Toggle dark mode">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<!-- ======================= HERO / ABOUT ======================= -->
+<section class="hero" id="about">
+  <div class="wrap">
+    <div class="hero-grid">
+      <aside class="hero-side">
+        <div class="portrait">
+          <img src="assets/img/headshot.jpg" alt="Portrait of Nicholas Sung" width="400" height="400">
+        </div>
+        <div class="side-card">
+          <h4>Education</h4>
+          <div class="edu-mini">
+            <div><b>MIT</b><span>Mechanical Engineering · SM thesis 2026</span><span class="yr">2023 – Present</span></div>
+            <div><b>BEng, Nanyang Technological University</b><span>Aerospace Engineering · Highest Distinction</span><span class="yr">2018 – 2022</span></div>
+          </div>
+        </div>
+      </aside>
+
+      <div>
+        <span class="eyebrow">Graduate Researcher · MIT</span>
+        <h1>Nicholas Sung</h1>
+        <p class="tagline">I build machine learning that makes engineering simulation faster.</p>
+        <div class="bio">
+          <p class="lede">
+            I'm a graduate researcher in Mechanical Engineering at <strong>MIT</strong>, advised by
+            <a href="https://decode.mit.edu/" target="_blank" rel="noopener">Prof. Faez Ahmed</a> in the DeCoDE Lab.
+            I work on <strong>scientific machine learning for engineering design</strong>: data-driven surrogates that speed up
+            fluid and structural simulation, <strong>multiphysics datasets and benchmarks</strong> for aircraft design, and
+            <strong>multi-fidelity methods</strong> that make better use of a limited number of expensive simulations.
+            This work appears at <strong>ICML</strong>, <strong>ASME IDETC</strong>, and <strong>AIAA SciTech</strong>.
+          </p>
+          <details class="more-bio">
+            <summary>More about me</summary>
+            <p>
+              I lead BlendedNet and its extensions, built with MIT Lincoln Laboratory and nTop.
+              <a href="publications.html#pub-blendednet">BlendedNet</a> is a public dataset of 999 blended wing body aircraft
+              with 8,830 RANS simulations, and a neural model that predicts pressure and skin friction across the aircraft surface.
+              <a href="publications.html#pub-blendednetpp">BlendedNet++</a> grows this to 12,492 geometries, compares five
+              surrogate models, and generates new aircraft shapes for a requested lift-to-drag ratio, which are then checked with CFD.
+              <a href="publications.html#pub-structures">BlendedNet++ Structures</a> passes the predicted aerodynamic loads to
+              finite element models of the internal structure, so a design can be chosen for low mass under stress and volume limits.
+              All three have <a href="demos.html">live demos</a> on this site.
+            </p>
+            <p>
+              On the methods side, <a href="publications.html#pub-fire">FIRE</a> (ICML 2026 Spotlight) uses tabular foundation
+              models to combine many inexpensive simulations with a few high-fidelity ones, and predicts both a value and its
+              uncertainty without retraining for each problem. My current work extends this to full physical fields and to
+              choosing which simulation to run next.
+            </p>
+            <p>
+              Before MIT, I was a research engineer at A*STAR's Centre for Frontier AI Research in Singapore, working on
+              physics-informed neural networks, and earned a BEng in Aerospace Engineering from
+              <strong>Nanyang Technological University</strong> with Highest Distinction. This fall I am the teaching assistant
+              for MIT 2.156, AI and Machine Learning for Engineering Design.
+            </p>
+          </details>
+        </div>
+
+        <div class="interests" aria-label="Research interests">
+          <span class="tag">Scientific Machine Learning</span>
+          <span class="tag">Surrogate Modeling</span>
+          <span class="tag">Multi-fidelity Learning</span>
+          <span class="tag">Generative Inverse Design</span>
+          <span class="tag">Aircraft Design</span>
+          <span class="tag">Tabular Foundation Models</span>
+        </div>
+
+        <div class="links">
+          <a class="pill primary" href="mailto:nicksung@mit.edu"><svg><use href="#i-mail"/></svg>nicksung@mit.edu</a>
+          <a class="pill" href="https://scholar.google.com/citations?user=GLLSoL8AAAAJ&amp;hl=en" target="_blank" rel="noopener"><svg><use href="#i-scholar"/></svg>Google Scholar</a>
+          <a class="pill" href="https://github.com/nicksungg" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg>GitHub</a>
+          <a class="pill" href="https://www.linkedin.com/in/nicholassung/" target="_blank" rel="noopener"><svg><use href="#i-linkedin"/></svg>LinkedIn</a>
+        </div>
+
+        <div class="affil" aria-label="Affiliations and collaborators">
+          <span class="affil-label">Affiliations &amp; collaborators</span>
+          <div class="affil-list">
+            <span>MIT DeCoDE Lab</span>
+            <span>MIT Lincoln Laboratory</span>
+            <span>nTop</span>
+            <span>A*STAR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FEATURED: LIVE DEMOS ======================= -->
+<section class="block" id="research">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-num">FEATURED</span>
+        <h2>Try my research live</h2>
+        <p>Three demos of the BlendedNet aircraft design work. They run on my workstation at MIT, so you can use the real models from your browser.</p>
+      </div>
+      <div class="sc-tabs" role="tablist" aria-label="Featured projects" data-tabs="showcase">
+        <button class="sc-tab active" role="tab" aria-selected="true" data-tab="blendednet">BlendedNet</button>
+        <button class="sc-tab" role="tab" aria-selected="false" data-tab="blendednetpp">BlendedNet++</button>
+        <button class="sc-tab" role="tab" aria-selected="false" data-tab="structures">BlendedNet++ Structures</button>
+      </div>
+    </div>
+
+    <div id="showcase">
+      <!-- BlendedNet -->
+      <div class="sc-stage" data-panel="blendednet" role="tabpanel">
+        <div class="sc-view">
+          <a class="sc-poster" href="demos.html#blendednet" aria-label="Open the BlendedNet live demo">
+            <img src="assets/img/projects/blendednet.jpg" width="1600" height="1000"
+                 alt="Pressure and skin friction on a blended wing body aircraft: RANS result, the model's prediction, and the absolute error">
+            <span class="play"><svg><use href="#i-play"/></svg>Open the live demo</span>
+          </a>
+          <p class="sc-caption">From the paper: pressure and skin friction from RANS, the model's prediction, and the absolute error.</p>
+        </div>
+        <aside class="sc-side">
+          <div>
+            <span class="eyebrow">BlendedNet · ASME IDETC 2025</span>
+            <h3>Predict the surface flow on a new aircraft shape</h3>
+            <p>A public dataset of blended wing body aircraft simulated with RANS, and a neural model that predicts <em>pressure and skin friction at every point on the surface</em> from the shape and the flight condition.</p>
+          </div>
+          <ol class="sc-steps">
+            <li>Set nine planform parameters and a flight condition.</li>
+            <li><b>Show Initial</b> builds the aircraft and predicts its lift-to-drag ratio.</li>
+            <li><b>Optimize &amp; Morph</b> reshapes it for a higher lift-to-drag ratio.</li>
+            <li><b>Run &amp; Predict</b> colors the surface with pressure or skin friction.</li>
+          </ol>
+          <div class="sc-stats"><div><b>999</b><span>aircraft geometries</span></div><div><b>8,830</b><span>RANS simulations</span></div><div><b>9–14M</b><span>volume cells per case</span></div></div>
+          <span class="status" data-demo-status="blendednet">Checking…</span>
+          <div class="sc-links"><a class="go" href="demos.html#blendednet">Live demo</a><a href="https://doi.org/10.1115/DETC2025-168977" target="_blank" rel="noopener">Paper</a><a href="https://doi.org/10.7910/DVN/VJT9EP" target="_blank" rel="noopener">Dataset</a></div>
+        </aside>
+      </div>
+
+      <!-- BlendedNet++ -->
+      <div class="sc-stage" data-panel="blendednetpp" role="tabpanel" hidden>
+        <div class="sc-view">
+          <a class="sc-poster" href="demos.html#blendednetpp" aria-label="Open the BlendedNet++ live demo">
+            <img src="assets/img/projects/blendednetpp.jpg" width="1600" height="1000" loading="lazy"
+                 alt="Fifteen different blended wing body aircraft shapes from the BlendedNet++ dataset">
+            <span class="play"><svg><use href="#i-play"/></svg>Open the live demo</span>
+          </a>
+          <p class="sc-caption">From the paper: fifteen of the 12,492 aircraft geometries in the dataset.</p>
+        </div>
+        <aside class="sc-side">
+          <div>
+            <span class="eyebrow">BlendedNet++ · arXiv 2025</span>
+            <h3>Generate an aircraft for a target lift-to-drag ratio</h3>
+            <p>A larger dataset, a benchmark of five surrogate models, and <em>generative inverse design</em>: a diffusion model proposes shapes for a requested lift-to-drag ratio, and CFD confirms them.</p>
+          </div>
+          <ol class="sc-steps">
+            <li>Choose altitude, airspeed, angle of attack, length, and a target lift-to-drag ratio.</li>
+            <li><b>Generate Candidates</b>: the diffusion model proposes four aircraft in about 40 seconds.</li>
+            <li>Select one, then <b>Run Field Prediction</b> to see pressure and skin friction over its surface.</li>
+          </ol>
+          <div class="sc-stats"><div><b>12,492</b><span>aircraft geometries</span></div><div><b>5</b><span>surrogate models compared</span></div><div><b>R² &gt; 0.99</b><span>target vs CFD lift-to-drag</span></div></div>
+          <span class="status" data-demo-status="blendednetpp">Checking…</span>
+          <div class="sc-links"><a class="go" href="demos.html#blendednetpp">Live demo</a><a href="https://arxiv.org/abs/2512.03280" target="_blank" rel="noopener">Paper</a><a href="https://doi.org/10.7910/DVN/ICIDK4" target="_blank" rel="noopener">Dataset</a></div>
+        </aside>
+      </div>
+
+      <!-- BlendedNet++ Structures -->
+      <div class="sc-stage" data-panel="structures" role="tabpanel" hidden>
+        <div class="sc-view">
+          <a class="sc-poster" href="demos.html#structures" aria-label="Open the BlendedNet++ Structures live demo">
+            <img src="assets/img/projects/structures.jpg" width="1600" height="1000" loading="lazy"
+                 alt="Internal ribs, spars and frames of a blended wing body aircraft, colored by stress, inside a translucent outer surface">
+            <span class="play"><svg><use href="#i-play"/></svg>Open the live demo</span>
+          </a>
+          <p class="sc-caption">From the paper: stress on the internal structure of one design, from the finite element analysis.</p>
+        </div>
+        <aside class="sc-side">
+          <div>
+            <span class="eyebrow">BlendedNet++ Structures · AIAA SciTech 2027</span>
+            <h3>Build the airframe and its internal structure</h3>
+            <p>An aerostructural dataset in which <em>predicted aerodynamic loads drive a shell finite element model</em>, and a benchmark for choosing planform, layout, and sizing to minimize mass under stress and volume limits.</p>
+          </div>
+          <ol class="sc-steps">
+            <li>Move the sliders for the planform and the structural layout.</li>
+            <li><b>Build geometry</b> runs nTop on my workstation, in about 40 seconds.</li>
+            <li>Explore the outer surface and the internal structure in 3D.</li>
+            <li>The <b>Pareto explorer</b> finds low-mass designs for a mission you set.</li>
+          </ol>
+          <div class="sc-stats"><div><b>13,989</b><span>analyzed runs</span></div><div><b>1,369</b><span>planforms</span></div><div><b>1.2%</b><span>median error in predicted mass</span></div></div>
+          <span class="status" data-demo-status="structures">Checking…</span>
+          <div class="sc-links"><a class="go" href="demos.html#structures">Live demo</a><a href="https://github.com/nicksungg/blendednet-pp-structures" target="_blank" rel="noopener">Code &amp; data</a></div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= NEWS ======================= -->
+<section class="block alt" id="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-num">NEWS</span>
+        <h2>Recent updates</h2>
+      </div>
+    </div>
+    <ul class="news" id="newsList">
+      <li><time>Jan 2027</time><span class="cat cat-paper">Paper</span><div><a href="publications.html#pub-structures">BlendedNet++ Structures</a> accepted, to appear at the <b>AIAA SciTech Forum 2027</b> in Orlando, January 11–15.</div></li>
+      <li><time>Sep 2026</time><span class="cat cat-talk">Teaching</span><div>Teaching assistant for MIT <b>2.156 AI and Machine Learning for Engineering Design</b> this fall.</div></li>
+      <li><time>Aug 2026</time><span class="cat cat-talk">Talk</span><div>Presented BlendedNet++ Structures at <b>ASME IDETC-CIE 2026</b> in Houston.</div></li>
+      <li><time>Aug 2026</time><span class="cat cat-release">Release</span><div>Released the <a href="https://github.com/nicksungg/nTop---ASME-IDETC-CIE-Student-Hackathon" target="_blank" rel="noopener">dataset and surrogate models</a> for the ASME IDETC-CIE student hackathon run by nTop and the MIT DeCoDE Lab.</div></li>
+      <li><time>Jul 2026</time><span class="cat cat-award">Spotlight</span><div><a href="publications.html#pub-fire">FIRE</a> presented at <b>ICML 2026</b> in Seoul as a <b>Spotlight</b>.</div></li>
+      <li><time>Apr 2026</time><span class="cat cat-paper">Paper</span><div><a href="publications.html#pub-fire">FIRE</a> appeared as a workshop paper at the <b>ICLR 2026</b> Foundation Models for Science workshop in Rio de Janeiro.</div></li>
+      <li><time>Mar 2026</time><span class="cat cat-talk">Talk</span><div>Presented <a href="publications.html#pub-blendednet">BlendedNet</a> at the 3rd ERCOFTAC Workshop on Machine Learning for Fluid Dynamics in Amsterdam.</div></li>
+      <li><time>Dec 2025</time><span class="cat cat-paper">Paper</span><div><a href="publications.html#pub-blendednetpp">BlendedNet++</a> posted on <a href="https://arxiv.org/abs/2512.03280" target="_blank" rel="noopener">arXiv</a>.</div></li>
+      <li><time>Aug 2025</time><span class="cat cat-paper">Paper</span><div><a href="publications.html#pub-blendednet">BlendedNet</a> presented at <b>ASME IDETC-CIE 2025</b> in Anaheim.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= CONTACT ======================= -->
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="contact reveal">
+      <div>
+        <span class="sec-num">CONTACT</span>
+        <h2>Let's talk</h2>
+        <p>I'm happy to talk about scientific machine learning, surrogate models for simulation, and multi-fidelity methods, whether for a research collaboration or a question about the datasets.</p>
+        <a class="email" href="mailto:nicksung@mit.edu">nicksung@mit.edu</a>
+        <p style="margin-top:14px;font-size:.9rem">MIT Department of Mechanical Engineering · Cambridge, MA</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:nicksung@mit.edu"><svg><use href="#i-mail"/></svg>Email<svg class="arrow"><use href="#i-arrow"/></svg></a>
+        <a href="https://scholar.google.com/citations?user=GLLSoL8AAAAJ&amp;hl=en" target="_blank" rel="noopener"><svg><use href="#i-scholar"/></svg>Google Scholar<svg class="arrow"><use href="#i-arrow"/></svg></a>
+        <a href="https://github.com/nicksungg" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg>GitHub<svg class="arrow"><use href="#i-arrow"/></svg></a>
+        <a href="https://www.linkedin.com/in/nicholassung/" target="_blank" rel="noopener"><svg><use href="#i-linkedin"/></svg>LinkedIn<svg class="arrow"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Nicholas Sung</span>
+    <span>Last updated November 2026</span>
+  </div>
+</footer>
+
+<button class="icon-btn to-top" id="toTop" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
+
+<script src="assets/js/main.js?v=1"></script>
+<script src="assets/js/live.js?v=1"></script>
+</body>
+</html>
